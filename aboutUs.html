@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Vck Travels</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== BASE ===== */
+
+body {
+    font-family: "Nunito", "Segoe UI", sans-serif;
+    background-image: url("../pexels-frandany-227885104-19911890.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+
+    /* Footer al fondo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+/* ===== NAVBAR ===== */
+
+.container-logo {
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 700;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.img-logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #168AAD 0%, #16B8A6);
+    padding: 15px 30px;
+    color: white;
+}
+
+.navBar a {
+    color: #123047;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navBar a:hover {
+    color: #16B8A6;
+}
+
+.navBar-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.navBar-menu a:hover {
+    color: aliceblue;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.search-container input {
+    width: 220px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.search-container button:hover {
+    color: aquamarine;
+}
+
+.btn-search,
+.btn-clear {
+    border-radius: 10px;
+    border: 1px;
+}
+
+/* ===== CARD PRINCIPAL (HOME Y ABOUT US) ===== */
+
+.content-card {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    text-align: center;
+    color: white;
+    background: rgba(18, 48, 71, 0.55);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.content-card h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.content-card p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+#book-now {
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(90deg, #168AAD 0%, #16B8A6);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#book-now:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== ABOUT US ===== */
+
+.about-card {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.about-card h1 {
+    font-size: 36px;
+    margin: 0 0 15px;
+}
+
+.about-card h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 15px;
+}
+
+.about-card > p {
+    max-width: 800px;
+    margin: 0 auto 16px;
+}
+
+/* Cards del equipo en horizontal */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-team {
+    background: rgba(255, 255, 255, 0.92);
+    color: #123047;
+    border-radius: 15px;
+    padding: 28px 22px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card-team:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-team > img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 18px;
+}
+
+.team-info h3 {
+    color: #123047;
+    font-size: 23px;
+    margin: 0 0 10px;
+}
+
+.team-info span {
+    display: inline-block;
+    background: linear-gradient(90deg, #168AAD 0%, #16B8A6);
+    color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.team-info p {
+    color: #123047;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background: linear-gradient(90deg, #168AAD 0%, #16B8A6);
+    padding: 35px 30px 15px;
+    color: white;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-content p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* REDES SOCIALES */
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.social-icons img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 30px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .content-card,
+    .about-card {
+        margin: 30px 15px;
+    }
+}
+/* ===== SEARCH RESULTS ===== */
+
+.results-section {
+    width: min(1200px, calc(100% - 40px));
+    box-sizing: border-box;
+    margin: 30px auto 0;
+    padding: 30px;
+    color: white;
+    background: rgba(18, 48, 71, 0.55);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.results-title {
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 25px;
+}
+
+.results-message {
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Cards en la misma fila mientras haya espacio */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 340px));
+    justify-content: center;
+    gap: 25px;
+}
+
+.place-card {
+    background: rgba(255, 255, 255, 0.92);
+    color: #123047;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Si una imagen no carga, se muestra el logo */
+.place-card img.img-fallback {
+    object-fit: contain;
+    padding: 25px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #168AAD 0%, #16B8A6);
+}
+
+.place-info {
+    padding: 18px 20px 22px;
+}
+
+.place-info h3 {
+    color: #123047;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.place-info p {
+    color: #123047;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .results-section {
+        padding: 20px 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <div class="container-logo">
+                <img src="logo-agencia-viajes.png" class="img-logo" alt="VCK Travels logo">
+                VCK TRAVELS
+            </div>
+
+            <ul class="navBar-menu">
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul>
+
+            <div class="search-container">
+                <input type="text" id="searchIn" placeholder="Enter a keyWord" maxlength="30">
+                <button onclick="search()" class="btn-search">Search</button>
+                <button onclick="clearSearch()" class="btn-clear">Clear</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- CARD 1: ABOUT US -->
+        <section class="content-card about-card">
+            <h1>About Us</h1>
+            <h2>Welcome to Vck Travels</h2>
+
+            <p>
+                Vck Travels is a travel agency committed to creating
+                unforgettable experiences around the world. Since its
+                foundation, our company has helped hundreds of travelers
+                discover new destinations, explore different cultures and
+                create lifelong memories.
+            </p>
+            <p>
+                Throughout our journey, we have achieved important
+                milestones, including recognition for our customer
+                service, successful partnerships with international
+                travel providers and the development of personalized
+                travel packages.
+            </p>
+            <p>
+                Our mission is to make every journey accessible,
+                comfortable and memorable. We believe that traveling
+                is more than visiting places; it is about discovering
+                new perspectives and connecting with the world.
+            </p>
+        </section>
+
+        <!-- CARD 2: OUR TEAM -->
+        <section class="content-card about-card">
+            <h2>Our Team</h2>
+            <p>
+                Meet the professionals who make every Vck Travels
+                experience possible.
+            </p>
+
+            <div class="team-grid">
+
+                <article class="card-team">
+                    <img src="usuario.png" alt="Jess, Chief Executive Officer">
+                    <div class="team-info">
+                        <h3>Jess</h3>
+                        <span>Chief Executive Officer</span>
+                        <p>
+                            Leads the company with a strategic vision,
+                            promoting innovation and excellence in
+                            the travel industry.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card-team">
+                    <img src="usuario.png" alt="Moy, Team Lead">
+                    <div class="team-info">
+                        <h3>Moy</h3>
+                        <span>Team Lead</span>
+                        <p>
+                            Coordinates the team and ensures that
+                            every travel project meets our quality
+                            standards and customer expectations.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card-team">
+                    <img src="usuario.png" alt="Moises, Delivery Head">
+                    <div class="team-info">
+                        <h3>Moises</h3>
+                        <span>Delivery Head</span>
+                        <p>
+                            Supervises travel operations and makes
+                            sure our services are delivered efficiently
+                            and on schedule.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-description">
+                <h3>Vck Travels</h3>
+                <p>
+                    Discover the world with us.
+                    Your next adventure starts here!
+                </p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: contact@vcktravels.com</p>
+                <p>Phone: +52 55 1234 5678</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="./facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="./instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+                        <img src="./x.png" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <img src="./youtube.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>JavaSript Essentials Final Project</p>
+        </div>
+    </footer>
+    <script src="./js/travel_recomendations.js"></script>
+</body>
+</html>
